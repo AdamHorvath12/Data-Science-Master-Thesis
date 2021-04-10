@@ -58,3 +58,13 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
   <img src="parser_free_3.jpg" width="256"/>
 </p>
 
+* Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content
+<p align="middle">
+  <img src="ACGPN_demo_1.jpg" width="256"/>
+  <img src="ACGPN_demo_2.jpg" width="256"/>
+</p>
+<p align="middle">
+  <img src="ACGPN_demo_3.jpg" width="256"/>
+  <img src="ACGPN_demo_4.jpg" width="256"/>
+</p>
+
