@@ -1,8 +1,10 @@
 # Data Science Thesis 2021
 
 This repository pertains to the **Data Science Thesis**
+
 Author: Adam Horvath-Reparszky
 Student-ID: 13326481
+Email: adam.horvath-reparszky@student.uva.nl
 
 Internal Supervisior: Dr. Shaodi You
 Email: s.you@uva.nl
@@ -11,10 +13,10 @@ Company Supervisor: Hernani Costa
 Email: hernani@lalaland.ai
 
 ## Thesis Schedule
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Week  | Date | Planned Achievement  | Achieved |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 
 ## File Information
 * `run_bg_removal.py` - This is the main python script that performs the **Background Removal** service.
