@@ -35,7 +35,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 ## Most related research papers
 | Name of the paper  | Link to paper | Link to code |
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | Parser-Free Virtual Try-on via Distilling Appearance Flows| https://arxiv.org/pdf/2103.04559v2.pdf | https://github.com/geyuying/PF-AFN |
 
 ## Experiments examples by paper
