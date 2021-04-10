@@ -34,10 +34,9 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 | Week 13 | 21/06 - 27/06 | Finishing the thesis and prepare for Thesis Defense |  |
 
 ## Most related research papers
-1. Constantly polls an AWS SQS Queue for new images to be processed.
-2. Performs the **Background Removal** service on each image.
-3. Updates a DynamoDB table with the background removal result.
-4. Stores the background-devoid image in a target AWS IBM S3 bucket.
+| Name of the paper  | Link to paper | Link to code |
+| ------------- | ------------- | ------------- | ------------- |
+| Parser-Free Virtual Try-on via Distilling Appearance Flows| https://arxiv.org/pdf/2103.04559v2.pdf | https://github.com/geyuying/PF-AFN |
 
 ## Experiments examples by paper
 <p align="middle">
