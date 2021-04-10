@@ -2,6 +2,8 @@
 
 This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszky at University of Amsterdam in 2021.
 
+**Link to the paper** : https://www.overleaf.com/project/6071a080ced8b32b96aa5101
+
 **Author**: Adam Horvath-Reparszky
 
 * **Student-ID**: 13326481
