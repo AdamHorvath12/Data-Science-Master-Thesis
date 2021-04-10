@@ -4,7 +4,7 @@ This repository pertains to the **Data Science Thesis**
 
 **Author**: Adam Horvath-Reparszky
 
-**Student-ID**: 13326481
+* **Student-ID**: 13326481
 
 **Email**: adam.horvath-reparszky@student.uva.nl
 
