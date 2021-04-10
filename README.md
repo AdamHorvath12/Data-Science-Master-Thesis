@@ -3,13 +3,17 @@
 This repository pertains to the **Data Science Thesis**
 
 **Author**: Adam Horvath-Reparszky
+
 **Student-ID**: 13326481
+
 **Email**: adam.horvath-reparszky@student.uva.nl
 
 **Internal Supervisior**: Dr. Shaodi You
+
 **Email**: s.you@uva.nl
 
 **Company Supervisor**: Hernani Costa
+
 **Email**: hernani@lalaland.ai
 
 ## Thesis Schedule
