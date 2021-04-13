@@ -70,3 +70,36 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
   <img src="ACGPN_demo_4.jpg" width="256"/>
 </p>
 
+* CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
+<p align="middle">
+  <img src="cp_viton:plus_1.jpg" width="256"/>
+  <img src="cp_viton:plus_2.jpg" width="256"/>
+  <img src="cp_viton:plus_3.jpg" width="256"/>
+</p>
+<p align="middle">
+  <img src="cp_viton:plus_4.jpg" width="256"/>
+  <img src="cp_viton:plus_5.jpg" width="256"/>
+</p>
+
+## Dataset
+
+VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. All the different approaches are trained and tested on this dataset.
+
+## Qualitative Evaluation
+
+This thesis mainly perform visual comparison of my method with recent proposed parser-based methods including VITON, Parser-free implementation, CPVTON+ and ACGPN.
+
+I will use a classification, published by ACGPN implementation on VITON test data to get three different image pools categorised by difficulty (easy, medium, difficult).
+
+## Quantitative Evaluation
+
+* **Frechet Inception Distance (FID)** : is a metric used to assess the quality of images created by the generator of a generative adversarial network (GAN). Unlike the earlier inception score (IS), which evaluates only the distribution of generated images, the FID compares the distribution of generated images with the distribution of real images that were used to train the generator.
+  * https://machinelearningmastery.com/how-to-implement-the-frechet-inception-distance-fid-from-scratch/
+  * https://jonathan-hui.medium.com/gan-how-to-measure-gan-performance-64b988c47732
+  * https://www.coursera.org/lecture/build-better-generative-adversarial-networks-gans/frechet-inception-distance-fid-LY8WK
+  * https://github.com/mseitzer/pytorch-fid
+
+* **Structural similarity (SSIM)** :  is a method for predicting the perceived quality of digital television and cinematic pictures, as well as other kinds of digital images and videos. SSIM is used for measuring the similarity between two images. The SSIM index is a full reference metric; in other words, the measurement or prediction of image quality is based on an initial uncompressed or distortion-free image as reference.
+  * https://medium.com/srm-mic/all-about-structural-similarity-index-ssim-theory-code-in-pytorch-6551b455541e
+
+
