@@ -72,13 +72,13 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 * CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
 <p align="middle">
-  <img src="cp_viton_plus_1.jpg" width="256"/>
-  <img src="cp_viton_plus_2.jpg" width="256"/>
-  <img src="cp_viton_plus_3.jpg" width="256"/>
+  <img src="cp_viton_plus_demo_1.jpg" width="256"/>
+  <img src="cp_viton_plus_demo_2.jpg" width="256"/>
+  <img src="cp_viton_plus_demo_3.jpg" width="256"/>
 </p>
 <p align="middle">
-  <img src="cp_viton_plus_4.jpg" width="256"/>
-  <img src="cp_viton_plus_5.jpg" width="256"/>
+  <img src="cp_viton_plus_demo_4.jpg" width="256"/>
+  <img src="cp_viton_plus_demo_5.jpg" width="256"/>
 </p>
 
 ## Dataset
