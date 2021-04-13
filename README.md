@@ -21,8 +21,8 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 ## Thesis Schedule
 | Week  | Date | Planned Achievement  | Achieved |
 | ------------- | ------------- | ------------- | ------------- |
-| Week 1 | 29/03 - 04/04 | Examine research papers in the field of garment transferring |  |
-| Week 2 (Current) | 05/04 - 11/04  | Start to do experiments using the selected papers. Decide which dataset I am going to use |  |
+| Week 1 | 29/03 - 04/04 | Examine research papers in the field of garment transferring | Almost 20-25 related research papers, 5 of them have been selected as most related papers ( I will focus on these implementations) |
+| Week 2 (Current) | 05/04 - 11/04  | Start to do experiments using the selected papers. Decide which dataset I am going to use | I decided to use the VITON dataset, beacuse it is public and most used benchmark dataset. Experiments on Parser-Free, CP_VITON+ and ACGPN implementation |
 | Week 3 |  12/04 - 18/04 | Finish experiments and start to identify general problems and categorise them. Select the evaluation measures |  |
 | Week 4  | 19/04 - 25/04 | Test the evaluation measures. Start writing the Abstartct/Introduction/Related Work part in the Thesis draft |  |
 | Week 5 |  26/04 - 02/05 | Writing the Thesis draft (Abstract/Intro/Literature review). Get new ideas how to solve existing problems (artifacts) |  |
