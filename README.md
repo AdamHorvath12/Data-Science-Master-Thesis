@@ -18,6 +18,11 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 * **Email**: hernani@lalaland.ai
 
+## Questions
+
+* FID score is originally implemented in Tensorflow but I would prefer to use the Pytorch implementation. I found a github repo for it, but the author highlight that there is a slight difference between the two approaches, however the weights and the model are exactly the same. Can I use it?
+* Idea about VITON dataset, that I can upsample the data to higher resolution with basic methods and do some experiments with those images?
+
 ## Thesis Schedule
 | Week  | Date | Planned Achievement  | Achieved |
 | ------------- | ------------- | ------------- | ------------- |
@@ -31,7 +36,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 | Week 8  | 17/05 - 23/05 | Writing Methodology + Results |  |
 | Week 9 | 24/05 - 30/05 | Writing Methodology + Results|  |
 | Week 10  | 31/05 - 06/06 | Evaluation part |  |
-| Week 11 | 07/06 - 13/0607/06 - 13/06 | Finalise the Methodology part + Future work|  |
+| Week 11 | 07/06 - 13/06 | Finalise the Methodology part + Future work|  |
 | Week 12  | 14/06 - 20/06 | Final version of Thesis Draft |  |
 | Week 13 | 21/06 - 27/06 | Finishing the thesis and prepare for Thesis Defense |  |
 
