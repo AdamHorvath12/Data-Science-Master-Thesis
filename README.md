@@ -21,7 +21,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 ## Questions
 
 * FID score is originally implemented in Tensorflow but I would prefer to use the Pytorch implementation. I found a github repo for it, but the author highlight that there is a slight difference between the two approaches, however the weights and the model are exactly the same. Can I use it?
-* Idea about VITON dataset, that I can upsample the data to higher resolution with basic methods and do some experiments with those images?
+* Idea about VITON dataset, that I can upscale the data to higher resolution with basic methods and do some experiments with those images?
 
 ## Thesis Schedule
 | Week  | Date | Planned Achievement  | Achieved |
