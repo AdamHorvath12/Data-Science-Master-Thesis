@@ -90,7 +90,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 ## Segmentation and occlusion identification on hair - Results - Current Status
 Since handling hands is more complex because those parts of the body are affected in the virtual tryon, I started build a network for hair extraction and occlusion identification using the target pose and target garment. In this section I present the current results.
-* Step 0. - Target Model and target garment
+* Step 0. - Target Model and target garment = result of Virtual Tryon network
 <p align="middle">
   <img src="original_img.jpg" width="256"/>
   <img src="traget_garment.jpg" width="256"/>
