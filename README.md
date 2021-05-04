@@ -93,7 +93,7 @@ Since handling hands is more complex because those parts of the body are affecte
 * Step 0. - Target Model and target garment
 <p align="middle">
   <img src="original_img.jpg" width="256"/>
-  <img src="target_garment.jpg" width="256"/>
+  <img src="traget_garment.jpg" width="256"/>
   <img src="result_img_1.jpg" width="256"/>
 </p>
 
