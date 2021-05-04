@@ -61,7 +61,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 ## Experiments examples by paper
 * Parser-Free Virtual Try-on via Distilling Appearance Flows
 <p align="middle">
-  <img src="parser_free_1.jpg" width="256"/>
+  <img src="images\parser_free_1.jpg" width="256"/>
   <img src="parser_free_2.jpg" width="256"/>
   <img src="parser_free_3.jpg" width="256"/>
 </p>
