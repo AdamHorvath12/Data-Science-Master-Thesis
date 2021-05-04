@@ -123,6 +123,7 @@ Since handling hands is more complex because those parts of the body are affecte
   <img src="new_hair_mask.jpg" width="256"/>
   <img src="new_img.jpg" width="256"/>
 </p>
+
 ## Dataset
 
 VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. All the different approaches are trained and tested on this dataset.
