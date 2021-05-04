@@ -62,29 +62,29 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 * Parser-Free Virtual Try-on via Distilling Appearance Flows
 <p align="middle">
   <img src="images\parser_free_1.jpg" width="256"/>
-  <img src="parser_free_2.jpg" width="256"/>
-  <img src="parser_free_3.jpg" width="256"/>
+  <img src="images\parser_free_2.jpg" width="256"/>
+  <img src="images\parser_free_3.jpg" width="256"/>
 </p>
 
 * Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content
 <p align="middle">
-  <img src="ACGPN_demo_1.jpg" width="256"/>
-  <img src="ACGPN_demo_2.jpg" width="256"/>
+  <img src="images\ACGPN_demo_1.jpg" width="256"/>
+  <img src="images\ACGPN_demo_2.jpg" width="256"/>
 </p>
 <p align="middle">
-  <img src="ACGPN_demo_3.jpg" width="256"/>
-  <img src="ACGPN_demo_4.jpg" width="256"/>
+  <img src="images\ACGPN_demo_3.jpg" width="256"/>
+  <img src="images\ACGPN_demo_4.jpg" width="256"/>
 </p>
 
 * CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
 <p align="middle">
-  <img src="cp_viton_plus_demo_1.jpg" width="256"/>
-  <img src="cp_viton_plus_demo_2.jpg" width="256"/>
-  <img src="cp_viton_plus_demo_3.jpg" width="256"/>
+  <img src="images\cp_viton_plus_demo_1.jpg" width="256"/>
+  <img src="images\cp_viton_plus_demo_2.jpg" width="256"/>
+  <img src="images\cp_viton_plus_demo_3.jpg" width="256"/>
 </p>
 <p align="middle">
-  <img src="cp_viton_plus_demo_4.jpg" width="256"/>
-  <img src="cp_viton_plus_demo_5.jpg" width="256"/>
+  <img src="images\cp_viton_plus_demo_4.jpg" width="256"/>
+  <img src="images\cp_viton_plus_demo_5.jpg" width="256"/>
 </p>
 
 
@@ -92,36 +92,36 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 Since handling hands is more complex because those parts of the body are affected in the virtual tryon, I started build a network for hair extraction and occlusion identification using the target pose and target garment. In this section I present the current results.
 * Step 0. - Target Model and target garment = result of Virtual Tryon network
 <p align="middle">
-  <img src="original_img.jpg" width="256"/>
-  <img src="traget_garment.jpg" width="256"/>
-  <img src="result_img_1.jpg" width="256"/>
+  <img src="images\original_img.jpg" width="256"/>
+  <img src="images\traget_garment.jpg" width="256"/>
+  <img src="images\result_img_1.jpg" width="256"/>
 </p>
 
 * Step 1. - Hair mask + extract the hair from the original image
 <p align="middle">
-  <img src="hair_mask.jpg" width="256"/>
-  <img src="extracted_original_hair.jpg" width="256"/>
+  <img src="images\hair_mask.jpg" width="256"/>
+  <img src="images\extracted_original_hair.jpg" width="256"/>
 </p>
 
 * Step 2. - Warped target garment and mask of it
 <p align="middle">
-  <img src="warped_target_garemnt.jpg" width="256"/>
-  <img src="warp_mask.jpg" width="256"/>
+  <img src="images\warped_target_garemnt.jpg" width="256"/>
+  <img src="images\warp_mask.jpg" width="256"/>
 </p>
 
 * Step 3. - Identify the occlusion parts
 <p align="middle">
-  <img src="hair_mask.jpg" width="256"/>
-  <img src="warp_mask.jpg" width="256"/>
-  <img src="hair_occlusion.jpg" width="256"/>
-  <img src="extracted_occlusion_part.jpg" width="256"/>
+  <img src="images\hair_mask.jpg" width="256"/>
+  <img src="images\warp_mask.jpg" width="256"/>
+  <img src="images\hair_occlusion.jpg" width="256"/>
+  <img src="images\extracted_occlusion_part.jpg" width="256"/>
 </p>
 
 * Step 4. - Example to how to change the hair
 <p align="middle">
-  <img src="original_without_hair.jpg" width="256"/>
-  <img src="new_hair_mask.jpg" width="256"/>
-  <img src="new_img.jpg" width="256"/>
+  <img src="images\original_without_hair.jpg" width="256"/>
+  <img src="images\new_hair_mask.jpg" width="256"/>
+  <img src="images\new_img.jpg" width="256"/>
 </p>
 
 ## Dataset
