@@ -88,7 +88,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 </p>
 
 
-## Segmentation and occlusion identification on hair - Results - Current Status
+## Segmentation and occlusion identification on hair
 Since handling hands is more complex because those parts of the body are affected in the virtual tryon, I started build a network for hair extraction and occlusion identification using the target pose and target garment. In this section I present the current results.
 * Step 0. - Target Model and target garment = result of Virtual Tryon network
 <p align="middle">
@@ -123,6 +123,17 @@ Since handling hands is more complex because those parts of the body are affecte
   <img src="images\new_hair_mask.jpg" width="256"/>
   <img src="images\new_img.jpg" width="256"/>
 </p>
+
+## Hair inpainting network - preprocessing
+
+* Hair and upperbody segmentation - Implementation: https://github.com/PeikeLi/Self-Correction-Human-Parsing
+<p align="middle">
+  <img src="images\segmentation_example_1.png" width="256"/>
+  <img src="images\segmentation_example_2.png" width="256"/>
+  <img src="images\segmentation_example_3.png" width="256"/>
+</p>
+
+Using these images to identify the optimal square for croping. Inpainting_preprocessing notebook consits of multiple preprocessing parts and plotting.
 
 ## Dataset
 
