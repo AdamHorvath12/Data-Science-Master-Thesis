@@ -18,11 +18,6 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 * **Email**: hernani@lalaland.ai
 
-## Questions
-
-* FID score is originally implemented in Tensorflow but I would prefer to use the Pytorch implementation. I found a github repo for it, but the author highlight that there is a slight difference between the two approaches, however the weights and the model are exactly the same. Can I use it?
-* Idea about VITON dataset, that I can upscale the data to higher resolution with basic methods and do some experiments with those images?
-* Idea to classify the garments as well into easy/medium/hard categories for testing? - the result can be a matrix with pose and garemnt classes and calculate the FID score for each part
 
 ## Thesis Schedule
 | Week  | Date | Planned Achievement  | Achieved |
@@ -31,11 +26,11 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 | Week 2 (Current) | 05/04 - 11/04  | Start to do experiments using the selected papers. Decide which dataset I am going to use | I decided to use the VITON dataset, beacuse it is public and most used benchmark dataset. Experiments on Parser-Free, CP_VITON+ and ACGPN implementation |
 | Week 3 |  12/04 - 18/04 | Finish experiments and start to identify general problems and categorise them. Select the evaluation measures | The general issues are the complex body poses and the hair if its cover the upper body. Since handling the hands is difficult since those parts of the bady are affected in the virtual tryon, I decided to focus on the hair occlusion part. The evaluation measures have been selected, however I am not sure that I will use them because it can happen that only visual comparison will be presented on the results. |
 | Week 4  | 19/04 - 25/04 | Start writing the Abstartct/Introduction/Related Work part in the Thesis draft | I started to write the thesis draft, but the plan changed a bit, I had to read more about segmentation and chechk the training code for each implementation. The introduction will be almost the last part I will write, but the related work part will be almost the same. Bit more on segmentation has to be added.|
-| Week 5 |  26/04 - 02/05 | Writing the Thesis draft (Abstract/Intro/Literature review). Get new ideas how to solve existing problems (artifacts) | I did not write the Thesis draft so in the following weeks I have to focus on that one, but I made a bif progress on segmentation. |
-| Week 6  |  03/05 - 09/05 | Try out solutions for solving problems. Improve teh Realted Work and dataset part.|  |
-| Week 7 | 10/05 - 16/05 | Try out solutions for solving problems. Improve the Thesis Draft |  |
-| Week 8  | 17/05 - 23/05 | Writing Methodology + Results |  |
-| Week 9 | 24/05 - 30/05 | Writing Methodology + Results|  |
+| Week 5 |  26/04 - 02/05 | Writing the Thesis draft (Abstract/Intro/Literature review). Get new ideas how to solve existing problems (artifacts) | I did not write the Thesis draft so in the following weeks I have to focus on that one, but I made a big progress on segmentation. |
+| Week 6  |  03/05 - 09/05 | Try out solutions for solving problems. Improve teh Realted Work and dataset part.| Selected all 5600 images from VITON dataset. Created the python script which uses segmentation, center position image croping, build up the basic of Image Inpainting Network |
+| Week 7 | 10/05 - 16/05 | Try out solutions for solving problems. Improve the Thesis Draft | Image Inpaiting network debugging + idea of resnet50 classifier |
+| Week 8  | 17/05 - 23/05 | Writing Methodology + Results | Build a Resnet50 classifier to increase the training data using DeepFashion dataset, the training is ready, Image Inpainting network crash after 5 mins of training so debugging is in progress |
+| Week 9 | 24/05 - 30/05 | Writing the Thesis draft + get the prediction from the classifier + start the inpainting training|  |
 | Week 10  | 31/05 - 06/06 | Evaluation part |  |
 | Week 11 | 07/06 - 13/06 | Finalise the Methodology part + Future work|  |
 | Week 12  | 14/06 - 20/06 | Final version of Thesis Draft |  |
@@ -137,7 +132,32 @@ Using these images to identify the optimal square for croping. Inpainting_prepro
 
 ## Dataset
 
-VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. All the different approaches are trained and tested on this dataset.
+VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. I used this dataset and manually selected those 5622 images where the target model has long hair and its is covering the shoulder or the garment. Using this custom dataset, I trained a Resnet50 classifier to extend my inpainting training data via select the proper images from DeepFashion dataset.
+
+* Training Resnet50 "Long hair" classifier
+
+The training data for "valid" images are which I selected manually from VITON dataset. For "invalid" images, I randomly selected 5600 images from those images which were not manually selected (short hair images or where the hair is not front of the body). After training the pretrained Resnet50 network with these data, the best accuracy on validation set was 91,5% after 5 epochs.
+
+<p align="middle">
+  <img src="Resnet50_hair_classifier\Model_prediction_example.jpg" width="256"/>
+</p>
+
+
+* Valid example -- Original image / Body part segmentation / Removing everything except hair and face mask (input of the model)
+
+<p align="middle">
+  <img src="Resnet50_hair_classifier\Valid_examples\000141_0.jpg" width="256"/>
+  <img src="Resnet50_hair_classifier\Valid_segmentation_examples\000141_0.png" width="256"/>
+  <img src="Resnet50_hair_classifier\Valid_model_input\000141_0.png" width="256"/>
+</p>
+
+* Invalid example -- Original image / Body part segmentation / Removing everything except hair and face mask (input of the model)
+
+<p align="middle">
+  <img src="Resnet50_hair_classifier\Invalid_examples\000044_0.jpg" width="256"/>
+  <img src="Resnet50_hair_classifier\Invalid_segmentation_examples\000044_0.png" width="256"/>
+  <img src="Resnet50_hair_classifier\Invalid_model_input\000044_0.png" width="256"/>
+</p>
 
 ## Qualitative Evaluation
 
