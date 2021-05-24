@@ -119,16 +119,27 @@ Since handling hands is more complex because those parts of the body are affecte
   <img src="images\new_img.jpg" width="256"/>
 </p>
 
-## Hair inpainting network - preprocessing
+## Hair inpainting network
 
-* Hair and upperbody segmentation - Implementation: https://github.com/PeikeLi/Self-Correction-Human-Parsing
+* Preprocessing Step 1. - Hair and upperbody segmentation - Implementation: https://github.com/PeikeLi/Self-Correction-Human-Parsing
 <p align="middle">
   <img src="images\segmentation_example_1.png" width="256"/>
   <img src="images\segmentation_example_2.png" width="256"/>
   <img src="images\segmentation_example_3.png" width="256"/>
 </p>
 
-Using these images to identify the optimal square for croping. Inpainting_preprocessing notebook consits of multiple preprocessing parts and plotting.
+* Preprocessing Step 2 - Image croping
+
+Using the coordinates of the hair mask, I identified that 130x130 croping images will include almost all hair parts from the custom dataset. To get these value I plotted all max values assigned to hair mask in each image both horizontal and vertical way. In order to get the face in the center position (horizontal way) I adjust the croping by using the horizontal min and max cooridinates.
+
+<p align="middle">
+  <img src="images\croped_images\000061_0.png" width="256"/>
+  <img src="images\croped_images\000073_0.png" width="256"/>
+  <img src="images\croped_images\000139_0.png" width="256"/>
+  <img src="images\croped_images\000141_0.png" width="256"/>
+</p>
+
+
 
 ## Dataset
 
