@@ -4,6 +4,8 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 **Author**: Adam Horvath-Reparszky
 
+**Title**: Virtual Try-on with Realistic Hair using Occlusion Aware Image Painting Network
+
 * **Student-ID**: 13326481
 
 * **Email**: adam.horvath-reparszky@student.uva.nl
@@ -37,10 +39,40 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 ## Collected Custom Hair Occlusion Dataset
 
+In order to, train the image inpainting network, firstly approximately 5,600 training images were manually selected from the VITON train dataset.
 
+<p align="middle">
+  <img src="images\Manually_selected.png" width="256"/>
+  <img src="images\Manually_selected_2.png" width="256"/>
+</p>
+
+Considering the fact that around 5,600 images have been manually labelled by myself, idea of training a Resnet classifier arose to collect more training data, via applying the classifier on larger dataset than VITON
+
+* Transfer Learning on Resnet50
+
+In order to increase the number of training images for inpainting, DeepFashion dataset has been chosen to select those potential images where occlusion by hair appears. Checking this amount of images manually would take a lot of time and effort, therefore, transfer learning, more specifically fine-tuning has been applied on the pre-trained Resnet50 convolutional neural network using the already selected images as training data to train a classifier that selects the potential images which include hair occlusion.
+
+<p align="middle">
+  <img src="images\Manually_selected.png" width="256"/>
+</p>
+
+Approximately 16,759 valid images have been selected, which results in almost three times bigger data collection than the first manually selected dataset.
+
+<p align="middle">
+  <img src="images\Resnet50_manually.png" width="256"/>
+</p>
+
+
+## Novel Data Preprocessing Method
+
+## Image Inpainting
+
+## Experiments
+
+## Conclusion
 
 ## Experiments examples by paper
-* Parser-Free Virtual Try-on via Distilling Appearance Flows
+
 <p align="middle">
   <img src="images\parser_free_1.jpg" width="256"/>
   <img src="images\parser_free_2.jpg" width="256"/>
