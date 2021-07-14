@@ -118,14 +118,14 @@ In contrast to the first implementation, for the second training quantitative an
  * **Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content (ACGPN)**
  * **CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On**
 
-* First Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
+* Results by using the First Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
  <p align="middle">
   <img src="images\Appendix_PF_AFN_1.png" width="256"/>
   <img src="images\Appendix_ACGPN_1.png" width="256"/>
   <img src="images\Appendix_CP_VTON_1.png" width="256"/>
 </p>
 
-* Second Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
+* Results by using the Second Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
  <p align="middle">
   <img src="images\Appendix_PF_AFN_2.png" width="256"/>
   <img src="images\Appendix_ACGPN_2.png" width="256"/>
