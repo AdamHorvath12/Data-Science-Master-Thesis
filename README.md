@@ -99,9 +99,9 @@ A novel data preprocessing stage is used to identify occlusion areas on the outp
   <img src="images\extracted_occlusion_part.jpg" width="256"/>
 </p>
 
-
+* Overview of the Data Preprocessing method
 <p align="middle">
-  <img src="images\Data_Preprocessing.png" width="550"/>
+  <img src="images\Data_Preprocessing.png" width="650"/>
 </p>
 
 
