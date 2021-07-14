@@ -2,9 +2,9 @@
 
 This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszky at University of Amsterdam in 2021.
 
-**Author**: Adam Horvath-Reparszky
-
 **Title**: Virtual Try-on with Realistic Hair using Occlusion Aware Image Painting Network
+
+**Author**: Adam Horvath-Reparszky
 
 * **Student-ID**: 13326481
 
@@ -65,11 +65,40 @@ Approximately 16,759 valid images have been selected, which results in almost th
 
 ## Novel Data Preprocessing Method
 
+A novel data preprocessing stage is used to identify occlusion areas on the output images from virtual try-on network. To produce adequate images to feed into the image inpainting network, cropping and masking steps are applied. The entire process consists of four main steps to prepare the final input images to the inpainting network. In regard of the two different inpainting networks, only the last step differs.
+
+
+<p align="middle">
+  <img src="images\Data_Preprocessing.png" width="550"/>
+</p>
+
+
 ## Image Inpainting
 
-## Experiments
+The original Co-modulated implementation conducted face inpainting experiments at 512x512 resolution on the FFHQ dataset,
+therefore the first training approach in this research used the manually collected custom dataset, crop all the images by using face centring to create a similar data collection as FFHQ but in lower resolution and most importantly including the extended upper body parts where occlusion can be identified. The cropped dataset has been fed into training phase to extend the facial learnt features with upper body and occlusion appearances.
 
-## Conclusion
+In contrast to the first implementation, for the second training quantitative and qualitative changes have been applied. Since StyleGAN based approaches usually use approximately 70,000 - 100,000 training images, which is significantly bigger than it was used for the first training, in order to narrow the gap and increase the number of training data, 16,759 images have been selected from DeepFashion dataset. As a result, it is almost quadrupled the size of the training data.
+
+## Experiments
+ Experimnets were conducted on three different state-of-the-art virtual try-on networks outputs:
+ -Parser-Free Virtual Try-on via Distilling Appearance Flows
+ -Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content
+ -CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
+
+* First Image Inpainting Network
+ <p align="middle">
+  <img src="images\Appendix_PF_AFN_1.png" width="256"/>
+  <img src="images\Appendix_ACGPN_1.png" width="256"/>
+  <img src="images\Appendix_CP_VTON_1.png" width="256"/>
+</p>
+
+* Second Image Inpainting Network
+ <p align="middle">
+  <img src="images\Appendix_PF_AFN_2.png" width="256"/>
+  <img src="images\Appendix_ACGPN_2.png" width="256"/>
+  <img src="images\Appendix_CP_VTON_2.png" width="256"/>
+</p>
 
 ## Experiments examples by paper
 
