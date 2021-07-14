@@ -17,7 +17,7 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 * **Email**: hernani@lalaland.ai
 
 <p align="middle">
-  <img src="images\Cover_Img.png" width="256"/>
+  <img src="images\Cover_Img.png" width="750"/>
 </p>
 
 
