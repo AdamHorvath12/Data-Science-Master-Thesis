@@ -95,7 +95,7 @@ In contrast to the first implementation, for the second training quantitative an
 
 * Second Image Inpainting Network
  <p align="middle">
-  <img src="images\Appendix_PF_AFN_2.png" width="256"/>
+  <img src="images\Appendix_PF_AFN_2.png" width="256" caption="Test"/>
   <img src="images\Appendix_ACGPN_2.png" width="256"/>
   <img src="images\Appendix_CP_VTON_2.png" width="256"/>
 </p>
