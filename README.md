@@ -2,8 +2,6 @@
 
 This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszky at University of Amsterdam in 2021.
 
-**Link to the paper** : https://www.overleaf.com/project/6071a080ced8b32b96aa5101
-
 **Author**: Adam Horvath-Reparszky
 
 * **Student-ID**: 13326481
@@ -18,23 +16,10 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 * **Email**: hernani@lalaland.ai
 
+<p align="middle">
+  <img src="images\Cover_img.jpg" width="256"/>
+</p>
 
-## Thesis Schedule
-| Week  | Date | Planned Achievement  | Achieved |
-| ------------- | ------------- | ------------- | ------------- |
-| Week 1 | 29/03 - 04/04 | Examine research papers in the field of garment transferring | Almost 20-25 related research papers, 5 of them have been selected as most related papers ( I will focus on these implementations) |
-| Week 2 (Current) | 05/04 - 11/04  | Start to do experiments using the selected papers. Decide which dataset I am going to use | I decided to use the VITON dataset, beacuse it is public and most used benchmark dataset. Experiments on Parser-Free, CP_VITON+ and ACGPN implementation |
-| Week 3 |  12/04 - 18/04 | Finish experiments and start to identify general problems and categorise them. Select the evaluation measures | The general issues are the complex body poses and the hair if its cover the upper body. Since handling the hands is difficult since those parts of the bady are affected in the virtual tryon, I decided to focus on the hair occlusion part. The evaluation measures have been selected, however I am not sure that I will use them because it can happen that only visual comparison will be presented on the results. |
-| Week 4  | 19/04 - 25/04 | Start writing the Abstartct/Introduction/Related Work part in the Thesis draft | I started to write the thesis draft, but the plan changed a bit, I had to read more about segmentation and chechk the training code for each implementation. The introduction will be almost the last part I will write, but the related work part will be almost the same. Bit more on segmentation has to be added.|
-| Week 5 |  26/04 - 02/05 | Writing the Thesis draft (Abstract/Intro/Literature review). Get new ideas how to solve existing problems (artifacts) | I did not write the Thesis draft so in the following weeks I have to focus on that one, but I made a big progress on segmentation. |
-| Week 6  |  03/05 - 09/05 | Try out solutions for solving problems. Improve teh Realted Work and dataset part.| Selected all 5600 images from VITON dataset. Created the python script which uses segmentation, center position image croping, build up the basic of Image Inpainting Network |
-| Week 7 | 10/05 - 16/05 | Try out solutions for solving problems. Improve the Thesis Draft | Image Inpaiting network debugging + idea of resnet50 classifier |
-| Week 8  | 17/05 - 23/05 | Writing Methodology + Results | Build a Resnet50 classifier to increase the training data using DeepFashion dataset, the training is ready, Image Inpainting network crash after 5 mins of training so debugging is in progress |
-| Week 9 | 24/05 - 30/05 | Writing the Thesis draft + get the prediction from the classifier + start the inpainting training|  |
-| Week 10  | 31/05 - 06/06 | Evaluation part |  |
-| Week 11 | 07/06 - 13/06 | Finalise the Methodology part + Future work|  |
-| Week 12  | 14/06 - 20/06 | Final version of Thesis Draft |  |
-| Week 13 | 21/06 - 27/06 | Finishing the thesis and prepare for Thesis Defense |  |
 
 ## Most related research papers
 | Name of the paper  | Link to paper | Link to code |
@@ -48,8 +33,9 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 |Do Not Mask What You Do Not Need to Mask: a Parser-Free Virtual Try-On(WUTON)|https://arxiv.org/pdf/2007.02721.pdf| Not available|
 |Image Based Virtual Try-on Network from unpaired data - Amazon research|https://assets.amazon.science/1a/2b/7a4dd8264ce19a959559da799aff/scipub-1281.pdf| Not available|
 |Style and Pose Control for Image Synthesis of Humans from a Single Monocular View|https://arxiv.org/pdf/2102.11263.pdf| Not available|
+|Large Scale Image Completion via Co-Modulated Generative Adversarial Networks|https://openreview.net/pdf?id=sSjqmfsk95O| https://github.com/zsyzzsoft/co-mod-gan|
 
-
+## Collected Custom Hair Occlusion Dataset
 
 
 
