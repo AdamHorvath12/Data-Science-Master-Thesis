@@ -41,19 +41,23 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 
 In order to, train the image inpainting network, firstly approximately 5,600 training images were manually selected from the VITON train dataset.
 
+VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. I used this dataset and manually selected those 5622 images where the target model has long hair and its is covering the shoulder or the garment.
+
 <p align="middle">
   <img src="images\Manually_selected.png" width="256"/>
   <img src="images\Manually_selected_2.png" width="256"/>
 </p>
 
-Considering the fact that around 5,600 images have been manually labelled by myself, idea of training a Resnet classifier arose to collect more training data, via applying the classifier on larger dataset than VITON
+Considering the fact that around 5,600 images have been manually labelled by myself, idea of training a Resnet classifier arose to collect more training data, via applying the classifier on larger dataset than VITON.
+
+
 
 * Transfer Learning on Resnet50
 
 In order to increase the number of training images for inpainting, DeepFashion dataset has been chosen to select those potential images where occlusion by hair appears. Checking this amount of images manually would take a lot of time and effort, therefore, transfer learning, more specifically fine-tuning has been applied on the pre-trained Resnet50 convolutional neural network using the already selected images as training data to train a classifier that selects the potential images which include hair occlusion.
 
 <p align="middle">
-  <img src="images\Manually_selected.png" width="256"/>
+  <img src="images\Resnet_flowchart.png" width="256"/>
 </p>
 
 Approximately 16,759 valid images have been selected, which results in almost three times bigger data collection than the first manually selected dataset.
@@ -65,73 +69,9 @@ Approximately 16,759 valid images have been selected, which results in almost th
 
 ## Novel Data Preprocessing Method
 
-A novel data preprocessing stage is used to identify occlusion areas on the output images from virtual try-on network. To produce adequate images to feed into the image inpainting network, cropping and masking steps are applied. The entire process consists of four main steps to prepare the final input images to the inpainting network. In regard of the two different inpainting networks, only the last step differs.
+A novel data preprocessing stage is used to identify occlusion areas on the output images from virtual try-on network. To produce adequate images to feed into the image inpainting network, cropping and masking steps are applied. The entire process consists of four main steps to prepare the final input images to the inpainting network. In regard of the two different inpainting networks, only the last step differs. 
 
 
-<p align="middle">
-  <img src="images\Data_Preprocessing.png" width="550"/>
-</p>
-
-
-## Image Inpainting
-
-The original Co-modulated implementation conducted face inpainting experiments at 512x512 resolution on the FFHQ dataset,
-therefore the first training approach in this research used the manually collected custom dataset, crop all the images by using face centring to create a similar data collection as FFHQ but in lower resolution and most importantly including the extended upper body parts where occlusion can be identified. The cropped dataset has been fed into training phase to extend the facial learnt features with upper body and occlusion appearances.
-
-In contrast to the first implementation, for the second training quantitative and qualitative changes have been applied. Since StyleGAN based approaches usually use approximately 70,000 - 100,000 training images, which is significantly bigger than it was used for the first training, in order to narrow the gap and increase the number of training data, 16,759 images have been selected from DeepFashion dataset. As a result, it is almost quadrupled the size of the training data.
-
-## Experiments
- Experimnets were conducted on three different state-of-the-art virtual try-on networks outputs:
- -Parser-Free Virtual Try-on via Distilling Appearance Flows
- -Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content
- -CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
-
-* First Image Inpainting Network
- <p align="middle">
-  <img src="images\Appendix_PF_AFN_1.png" width="256"/>
-  <img src="images\Appendix_ACGPN_1.png" width="256"/>
-  <img src="images\Appendix_CP_VTON_1.png" width="256"/>
-</p>
-
-* Second Image Inpainting Network
- <p align="middle">
-  <img src="images\Appendix_PF_AFN_2.png" width="256" caption="Test"/>
-  <img src="images\Appendix_ACGPN_2.png" width="256"/>
-  <img src="images\Appendix_CP_VTON_2.png" width="256"/>
-</p>
-
-## Experiments examples by paper
-
-<p align="middle">
-  <img src="images\parser_free_1.jpg" width="256"/>
-  <img src="images\parser_free_2.jpg" width="256"/>
-  <img src="images\parser_free_3.jpg" width="256"/>
-</p>
-
-* Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content
-<p align="middle">
-  <img src="images\ACGPN_demo_1.jpg" width="256"/>
-  <img src="images\ACGPN_demo_2.jpg" width="256"/>
-</p>
-<p align="middle">
-  <img src="images\ACGPN_demo_3.jpg" width="256"/>
-  <img src="images\ACGPN_demo_4.jpg" width="256"/>
-</p>
-
-* CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On
-<p align="middle">
-  <img src="images\cp_viton_plus_demo_1.jpg" width="256"/>
-  <img src="images\cp_viton_plus_demo_2.jpg" width="256"/>
-  <img src="images\cp_viton_plus_demo_3.jpg" width="256"/>
-</p>
-<p align="middle">
-  <img src="images\cp_viton_plus_demo_4.jpg" width="256"/>
-  <img src="images\cp_viton_plus_demo_5.jpg" width="256"/>
-</p>
-
-
-## Segmentation and occlusion identification on hair
-Since handling hands is more complex because those parts of the body are affected in the virtual tryon, I started build a network for hair extraction and occlusion identification using the target pose and target garment. In this section I present the current results.
 * Step 0. - Target Model and target garment = result of Virtual Tryon network
 <p align="middle">
   <img src="images\original_img.jpg" width="256"/>
@@ -159,79 +99,35 @@ Since handling hands is more complex because those parts of the body are affecte
   <img src="images\extracted_occlusion_part.jpg" width="256"/>
 </p>
 
-* Step 4. - Example to how to change the hair
-<p align="middle">
-  <img src="images\original_without_hair.jpg" width="256"/>
-  <img src="images\new_hair_mask.jpg" width="256"/>
-  <img src="images\new_img.jpg" width="256"/>
-</p>
-
-## Hair inpainting network
-
-* Preprocessing Step 1. - Hair and upperbody segmentation - Implementation: https://github.com/PeikeLi/Self-Correction-Human-Parsing
-<p align="middle">
-  <img src="images\segmentation_example_1.png" width="256"/>
-  <img src="images\segmentation_example_2.png" width="256"/>
-  <img src="images\segmentation_example_3.png" width="256"/>
-</p>
-
-* Preprocessing Step 2 - Image croping
-
-Using the coordinates of the hair mask, I identified that 130x130 croping images will include almost all hair parts from the custom dataset. To get these value I plotted all max values assigned to hair mask in each image both horizontal and vertical way. In order to get the face in the center position (horizontal way) I adjust the croping by using the horizontal min and max cooridinates.
 
 <p align="middle">
-  <img src="images\croped_images\000061_0.png" width="256"/>
-  <img src="images\croped_images\000073_0.png" width="256"/>
-  <img src="images\croped_images\000139_0.png" width="256"/>
-  <img src="images\croped_images\000141_0.png" width="256"/>
+  <img src="images\Data_Preprocessing.png" width="550"/>
 </p>
 
 
+## Image Inpainting
 
-## Dataset
+The original Co-modulated implementation conducted face inpainting experiments at 512x512 resolution on the FFHQ dataset,
+therefore the first training approach in this research used the manually collected custom dataset, crop all the images by using face centring to create a similar data collection as FFHQ but in lower resolution and most importantly including the extended upper body parts where occlusion can be identified. The cropped dataset has been fed into training phase to extend the facial learnt features with upper body and occlusion appearances.
 
-VITON contains a training set of 14,221 image pairs and a test set of 2,032 image pairs, each of which has a front-view woman photo and a top clothing image with the resolution 256 x 192. I used this dataset and manually selected those 5622 images where the target model has long hair and its is covering the shoulder or the garment. Using this custom dataset, I trained a Resnet50 classifier to extend my inpainting training data via select the proper images from DeepFashion dataset.
+In contrast to the first implementation, for the second training quantitative and qualitative changes have been applied. Since StyleGAN based approaches usually use approximately 70,000 - 100,000 training images, which is significantly bigger than it was used for the first training, in order to narrow the gap and increase the number of training data, 16,759 images have been selected from DeepFashion dataset. As a result, it is almost quadrupled the size of the training data.
 
-* Training Resnet50 "Long hair" classifier
+## Experiments
+ Experimnets were conducted on three different state-of-the-art virtual try-on networks outputs.
+ * **Parser-Free Virtual Try-on via Distilling Appearance Flows**
+ * **Towards Photo-Realistic Virtual Try-On by Adaptively Generating↔Preserving Image Content (ACGPN)**
+ * **CP-VTON+: Clothing Shape and Texture Preserving Image-Based Virtual Try-On**
 
-The training data for "valid" images are which I selected manually from VITON dataset. For "invalid" images, I randomly selected 5600 images from those images which were not manually selected (short hair images or where the hair is not front of the body). After training the pretrained Resnet50 network with these data, the best accuracy on validation set was 91,5% after 5 epochs.
-
-<p align="middle">
-  <img src="Resnet50_hair_classifier\Model_prediction_example.jpg" width="256"/>
+* First Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
+ <p align="middle">
+  <img src="images\Appendix_PF_AFN_1.png" width="256"/>
+  <img src="images\Appendix_ACGPN_1.png" width="256"/>
+  <img src="images\Appendix_CP_VTON_1.png" width="256"/>
 </p>
 
-
-* Valid example -- Original image / Body part segmentation / Removing everything except hair and face mask (input of the model)
-
-<p align="middle">
-  <img src="Resnet50_hair_classifier\Valid_examples\000141_0.jpg" width="256"/>
-  <img src="Resnet50_hair_classifier\Valid_segmentation_examples\000141_0.png" width="256"/>
-  <img src="Resnet50_hair_classifier\Valid_model_input\000141_0.png" width="256"/>
+* Second Image Inpainting Network (Parser-Free/ACGPN/CP_VTON+)
+ <p align="middle">
+  <img src="images\Appendix_PF_AFN_2.png" width="256"/>
+  <img src="images\Appendix_ACGPN_2.png" width="256"/>
+  <img src="images\Appendix_CP_VTON_2.png" width="256"/>
 </p>
-
-* Invalid example -- Original image / Body part segmentation / Removing everything except hair and face mask (input of the model)
-
-<p align="middle">
-  <img src="Resnet50_hair_classifier\Invalid_examples\000044_0.jpg" width="256"/>
-  <img src="Resnet50_hair_classifier\Invalid_segmentation_examples\000044_0.png" width="256"/>
-  <img src="Resnet50_hair_classifier\Invalid_model_input\000044_0.png" width="256"/>
-</p>
-
-## Qualitative Evaluation
-
-This thesis mainly perform visual comparison of my method with recent proposed parser-based methods including VITON, Parser-free implementation, CPVTON+ and ACGPN.
-
-I will use a classification, published by ACGPN implementation on VITON test data to get three different image pools categorised by difficulty (easy, medium, difficult).
-
-## Quantitative Evaluation
-
-* **Frechet Inception Distance (FID)** : is a metric used to assess the quality of images created by the generator of a generative adversarial network (GAN). Unlike the earlier inception score (IS), which evaluates only the distribution of generated images, the FID compares the distribution of generated images with the distribution of real images that were used to train the generator.
-  * https://machinelearningmastery.com/how-to-implement-the-frechet-inception-distance-fid-from-scratch/
-  * https://jonathan-hui.medium.com/gan-how-to-measure-gan-performance-64b988c47732
-  * https://www.coursera.org/lecture/build-better-generative-adversarial-networks-gans/frechet-inception-distance-fid-LY8WK
-  * https://github.com/mseitzer/pytorch-fid
-
-* **Structural similarity (SSIM)** :  is a method for predicting the perceived quality of digital television and cinematic pictures, as well as other kinds of digital images and videos. SSIM is used for measuring the similarity between two images. The SSIM index is a full reference metric; in other words, the measurement or prediction of image quality is based on an initial uncompressed or distortion-free image as reference.
-  * https://medium.com/srm-mic/all-about-structural-similarity-index-ssim-theory-code-in-pytorch-6551b455541e
-
-
