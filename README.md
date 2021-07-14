@@ -57,7 +57,7 @@ Considering the fact that around 5,600 images have been manually labelled by mys
 In order to increase the number of training images for inpainting, DeepFashion dataset has been chosen to select those potential images where occlusion by hair appears. Checking this amount of images manually would take a lot of time and effort, therefore, transfer learning, more specifically fine-tuning has been applied on the pre-trained Resnet50 convolutional neural network using the already selected images as training data to train a classifier that selects the potential images which include hair occlusion.
 
 <p align="middle">
-  <img src="images\Resnet_flowchart.png" width="256"/>
+  <img src="images\Resnet_flowchart.png" width="550"/>
 </p>
 
 Approximately 16,759 valid images have been selected, which results in almost three times bigger data collection than the first manually selected dataset.
