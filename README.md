@@ -1,4 +1,10 @@
-# Data Science Thesis 2021
+# Virtual Try-on with Realistic Hair using Occlusion Aware Image Painting Network
+
+<p align="middle">
+  <img src="images\Cover_Img.png" width="750"/>
+</p>
+
+
 
 This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszky at University of Amsterdam in 2021.
 
@@ -17,10 +23,6 @@ This repository pertains to the **Data Science Thesis** of Adam Horvath-Reparszk
 **Company Supervisor**: Hernani Costa
 
 * **Email**: hernani@lalaland.ai
-
-<p align="middle">
-  <img src="images\Cover_Img.png" width="750"/>
-</p>
 
 
 ## Most related research papers
